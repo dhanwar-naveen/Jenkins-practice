@@ -1,11 +1,11 @@
-FROM node:14
+FROM python:3
 
 COPY . /app
 
 WORKDIR /app
 
-RUN npm install
+RUN pip install -r requirements.txt
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["python", "main.py"]
